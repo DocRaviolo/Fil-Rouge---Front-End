@@ -21,6 +21,8 @@ import {RouterModule} from "@angular/router";
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+
+    //Chemins d'accès vers les différentes pages
     RouterModule.forRoot([
       {path: '', component: WelcomepageComponent},
       {path: 'admin', component: AdminpageComponent},
