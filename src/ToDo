@@ -1,0 +1,51 @@
+1) Créer la structure Angular
+- Component
+- Routes
+- Interface
+
+
+
+2) Créer l'interface APP Componenet
+
+
+
+3) Créer interface de la page d'accueuil
+
+
+
+4) Créer l'interface du mode ADMIN
+
+5) Créer l'interface du GameUser
+    - Choix du personnage (3 vies)
+    - Choix du set (armes et défenses), qui donnent le score de combat initial
+    - Choix du déplacement (H,B,D,G)
+
+
+
+6) Créer l'interface du plateau de jeux
+ -aire je jeux
+- feuille d'aventure
+- gestion des events
+
+
+
+7) Coder les déplacements
+    - Haut
+    - Bas
+    - Droite
+    - Gauche
+
+
+
+8) Coder les événements du parcours :
+    - Je tombe sur une case vide, je continue mon chemin
+    - Je tombe sur un trou, je reviens au départ
+    - Je tombe sur un ? -> bonus ou malus
+    - Je tombe sur un ennemis ->
+        ⦁ Tirage au sort pour savoir qui commence
+        ⦁ Choix de la carte retournée.... (image : tête, corps, jambe, circulaire, loupé avec les points), je choisi une carte tant que PC > 0
+        ⦁ Soustraction des points de combats
+        ⦁ Total des PC.
+            Si 0 => je perds une vie et je recommence le combat.
+            Si je n'ai plus de vie, game over.
+            Si j'ai gagné, je continue le jeu.
