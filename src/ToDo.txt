@@ -1,29 +1,30 @@
 1) Créer la structure Angular
-- Component
-- Routes
-- Interface
+[X] - Component
+[X] - Routes
+- Interface :
+    _
 
 
 
-2) Créer l'interface APP Componenet
+2) Créer la vue APP Component
 
 
 
-3) Créer interface de la page d'accueuil
+3) Créer la vue de la page d'accueuil
 
 
 
-4) Créer l'interface du mode ADMIN
+4) Créer la vue du mode ADMIN
 
-5) Créer l'interface du GameUser
+5) Créer la vue du GameUser
     - Choix du personnage (3 vies)
     - Choix du set (armes et défenses), qui donnent le score de combat initial
     - Choix du déplacement (H,B,D,G)
 
 
 
-6) Créer l'interface du plateau de jeux
- -aire je jeux
+6) Créer la vue du plateau de jeu
+ -aire de jeux
 - feuille d'aventure
 - gestion des events
 
