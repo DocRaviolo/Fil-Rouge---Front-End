@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import { UsertableComponent } from './usertable/usertable.component';
+import { HerotableComponent } from './herotable/herotable.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UsertableComponent } from './usertable/usertable.component';
     AdminpageComponent,
     PlayerpageComponent,
     GamepageComponent,
-    UsertableComponent
+    UsertableComponent,
+    HerotableComponent
   ],
   imports: [
     BrowserModule,
@@ -27,10 +29,13 @@ import { UsertableComponent } from './usertable/usertable.component';
     //Chemins d'accès vers les différentes pages
     RouterModule.forRoot([
       {path: '', component: WelcomepageComponent},
-      {path: 'admin', component: AdminpageComponent},
+      {path: 'admin', component: AdminpageComponent, children :[
+          {path: 'usertable', component :UsertableComponent},
+          {path: 'herotable', component :HerotableComponent}
+
+        ]},
       {path: 'player', component: PlayerpageComponent},
       {path: 'game', component: GamepageComponent},
-      {path: 'usertable', component :UsertableComponent}
       ]),],
 
 

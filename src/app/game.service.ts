@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Gameuser} from "./gameuser";
+import {Hero} from "./hero";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,10 @@ export class GameService {
 
   getUserList() {
     return this.http.get<Gameuser[]>(this.baseAPIUrl+'admin/gameuser')
+  }
+
+  getHeroList() {
+    return this.http.get<Hero[]>(this.baseAPIUrl+'admin/hero')
   }
 
   //getCardList(timelineId: number) {

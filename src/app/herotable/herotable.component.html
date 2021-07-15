@@ -1,0 +1,23 @@
+<table id="heroTable">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Modifier</th>
+    <th>Supprimer</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- ngFor : ajout d'une ligne dans le tableau pour chaque nouveau héro trouvé-->
+  <tr *ngFor="let hero of heroList | async">
+    <td>{{hero.id}}</td>
+    <td>{{hero.name}}</td>
+         <td>
+      <button (click)="updateHero(hero.id)">Modifier</button>
+    </td>
+    <td>
+      <button (click)="deleteHero(hero.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
