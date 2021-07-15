@@ -1,0 +1,27 @@
+<table id="weaponTable">
+
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Points</th>
+    <th>Modifier</th>
+    <th>Supprimer</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let weapon of weaponList | async">
+    <td>{{weapon.id}}</td>
+    <td>{{weapon.name}}</td>
+    <td>{{weapon.points}}</td>
+    <td>
+      <button (click)="updateWeapon(weapon.id)">Modifier</button>
+    </td>
+    <td>
+      <button (click)="deleteWeapon(weapon.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+
+</table>

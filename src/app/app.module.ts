@@ -12,6 +12,7 @@ import { UsertableComponent } from './usertable/usertable.component';
 import { HerotableComponent } from './herotable/herotable.component';
 import { DecortableComponent } from './decortable/decortable.component';
 import { EnemytableComponent } from './enemytable/enemytable.component';
+import { WeapontableComponent } from './weapontable/weapontable.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EnemytableComponent } from './enemytable/enemytable.component';
     UsertableComponent,
     HerotableComponent,
     DecortableComponent,
-    EnemytableComponent
+    EnemytableComponent,
+    WeapontableComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { EnemytableComponent } from './enemytable/enemytable.component';
           {path: 'usertable', component :UsertableComponent},
           {path: 'herotable', component :HerotableComponent},
           {path: 'decortable', component :DecortableComponent},
-          {path: 'enemytable', component :EnemytableComponent}
+          {path: 'enemytable', component :EnemytableComponent},
+          {path: 'weapontable', component :WeapontableComponent}
         ]},
       {path: 'player', component: PlayerpageComponent},
       {path: 'game', component: GamepageComponent},

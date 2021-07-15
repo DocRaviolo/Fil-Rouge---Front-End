@@ -15,10 +15,10 @@ export class EnemytableComponent implements OnInit {
   }
 
   updateEnemy(id: number) {
-    
+
   }
 
   deleteEnemy(id: number) {
-    
+
   }
 }

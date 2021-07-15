@@ -4,6 +4,7 @@ import {Gameuser} from "./gameuser";
 import {Hero} from "./hero";
 import {Decorelement} from "./decorelement";
 import {Enemy} from "./enemy";
+import {Weapon} from "./weapon";
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,11 @@ export class GameService {
   // Méthode pour récupérer la liste des Ennemis
   getEnemyList() {
     return this.http.get<Enemy[]>(this.baseAPIUrl+'admin/enemy')
+  }
+
+  // Méthode pour récupérer la liste des Armes
+  getWeaponList() {
+    return this.http.get<Weapon[]>(this.baseAPIUrl+'admin/weapon')
+
   }
 }
