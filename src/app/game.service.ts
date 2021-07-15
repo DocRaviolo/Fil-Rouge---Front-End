@@ -6,6 +6,7 @@ import {Decorelement} from "./decorelement";
 import {Enemy} from "./enemy";
 import {Weapon} from "./weapon";
 import {Defenseequipment} from "./defenseequipment";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -14,37 +15,43 @@ export class GameService {
 
   baseAPIUrl = 'http://localhost:8080/api/';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   // Méthode pour récupérer la liste des Users
   getUserList() {
-    return this.http.get<Gameuser[]>(this.baseAPIUrl+'admin/gameuser')
+    return this.http.get<Gameuser[]>(this.baseAPIUrl + 'admin/gameuser')
   }
 
   // Méthode pour récupérer la liste des Heros
   getHeroList() {
-    return this.http.get<Hero[]>(this.baseAPIUrl+'admin/hero')
+    return this.http.get<Hero[]>(this.baseAPIUrl + 'admin/hero')
   }
 
   // Méthode pour récupérer la liste des Décors
   getDecorList() {
-    return this.http.get<Decorelement[]>(this.baseAPIUrl+'admin/decorelement')
+    return this.http.get<Decorelement[]>(this.baseAPIUrl + 'admin/decorelement')
   }
 
   // Méthode pour récupérer la liste des Ennemis
   getEnemyList() {
-    return this.http.get<Enemy[]>(this.baseAPIUrl+'admin/enemy')
+    return this.http.get<Enemy[]>(this.baseAPIUrl + 'admin/enemy')
   }
 
   // Méthode pour récupérer la liste des Armes
   getWeaponList() {
-    return this.http.get<Weapon[]>(this.baseAPIUrl+'admin/weapon')
+    return this.http.get<Weapon[]>(this.baseAPIUrl + 'admin/weapon')
 
   }
+
   // Méthode pour récupérer la liste des Equipements Défensifs
   getDefenseList() {
-    return this.http.get<Defenseequipment[]>(this.baseAPIUrl+'admin/defenseequipment')
+    return this.http.get<Defenseequipment[]>(this.baseAPIUrl + 'admin/defenseequipment')
+  }
 
+  // Méthode pour mettre à jour le Héros
+  updateHero(hero: Hero): Observable<Hero> {
+    return this.http.put<Hero>(this.baseAPIUrl+'admin/hero', hero);
   }
 
 //getCardList(timelineId: number) {

@@ -13,7 +13,7 @@ import {HerotableComponent} from './herotable/herotable.component';
 import {DecortableComponent} from './decortable/decortable.component';
 import {EnemytableComponent} from './enemytable/enemytable.component';
 import {WeapontableComponent} from './weapontable/weapontable.component';
-import { DefensetableComponent } from './defensetable/defensetable.component';
+import {DefensetableComponent } from './defensetable/defensetable.component';
 
 @NgModule({
   declarations: [
@@ -49,8 +49,8 @@ import { DefensetableComponent } from './defensetable/defensetable.component';
       },
       {path: 'player', component: PlayerpageComponent},
       {path: 'game', component: GamepageComponent},
-    ]),],
-
+    ]),
+    ],
 
   providers: [],
   bootstrap: [AppComponent]
