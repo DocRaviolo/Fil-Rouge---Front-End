@@ -11,6 +11,7 @@ import {RouterModule} from "@angular/router";
 import { UsertableComponent } from './usertable/usertable.component';
 import { HerotableComponent } from './herotable/herotable.component';
 import { DecortableComponent } from './decortable/decortable.component';
+import { EnemytableComponent } from './enemytable/enemytable.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DecortableComponent } from './decortable/decortable.component';
     GamepageComponent,
     UsertableComponent,
     HerotableComponent,
-    DecortableComponent
+    DecortableComponent,
+    EnemytableComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { DecortableComponent } from './decortable/decortable.component';
       {path: 'admin', component: AdminpageComponent, children :[
           {path: 'usertable', component :UsertableComponent},
           {path: 'herotable', component :HerotableComponent},
-          {path: 'decortable', component :DecortableComponent}
+          {path: 'decortable', component :DecortableComponent},
+          {path: 'enemytable', component :EnemytableComponent}
         ]},
       {path: 'player', component: PlayerpageComponent},
       {path: 'game', component: GamepageComponent},

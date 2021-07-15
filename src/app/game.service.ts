@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Gameuser} from "./gameuser";
 import {Hero} from "./hero";
 import {Decorelement} from "./decorelement";
+import {Enemy} from "./enemy";
 
 @Injectable({
   providedIn: 'root'
@@ -35,4 +36,8 @@ export class GameService {
   //  return this.http.delete<Card>(this.baseAPIUrl+'/1/card/' + cardId)
  // }
 
+  // Méthode pour récupérer la liste des Ennemis
+  getEnemyList() {
+    return this.http.get<Enemy[]>(this.baseAPIUrl+'admin/enemy')
+  }
 }
