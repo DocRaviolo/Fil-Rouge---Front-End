@@ -1,0 +1,28 @@
+<table id="userTable">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Niveau</th>
+    <th>Héros</th>
+    <th>Modifier</th>
+    <th>Supprimer</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- ngFor : ajout d'une ligne dans le tableau pour chaque nouveau user trouvé-->
+  <tr *ngFor="let user of userList | async">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.level}}</td>
+    <td>{{user.hero.name}}</td>
+    <!--recuperer le nom du héro pour un user donné      -->
+    <td>
+      <button (click)="updateUser(user.id)">Modifier</button>
+    </td>
+    <td>
+      <button (click)="deleteUser(user.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

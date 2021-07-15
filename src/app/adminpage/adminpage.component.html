@@ -1,21 +1,19 @@
 <h2>Mode administrateur</h2>
-
 <section id="sectionGestion">
   <h3>Gérer les :</h3>
-  <button (click)="buttonUser()">Utilisateurs</button>
-  <button (click)="buttonHero()">Héros</button>
-  <button (click)="buttonDecorElement()">Eléments de décor</button>
-  <button (click)="buttonEnemies()">Ennemis</button>
-  <button (click)="buttonWeapons()">Armes</button>
-  <button (click)="buttonDefenseEquipment()">Equipements défensifs</button>
+  <button><a [routerLink]="['usertable']">Utilisateurs</a></button>
+
+  <!--  <button (click)="buttonHero()">Héros</button>-->
+  <!--  <button (click)="buttonDecorElement()">Eléments de décor</button>-->
+  <!--  <button (click)="buttonEnemies()">Ennemis</button>-->
+  <!--  <button (click)="buttonWeapons()">Armes</button>-->
+  <!--  <button (click)="buttonDefenseEquipment()">Equipements défensifs</button>-->
 </section>
-
-
-
 <section id="sectionListes">
-
+  <router-outlet>
+<!--  en fonction de mon router, va s'afficher ici une vue différente-->
+  </router-outlet>
 </section>
-
 <section id="sectionCreation">
-
 </section>
+

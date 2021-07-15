@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GameService} from "../game.service";
+import {Component, OnInit} from '@angular/core';
+import {GameService} from "../game.service";
 
 @Component({
   selector: 'app-adminpage',
@@ -12,16 +12,13 @@ export class AdminpageComponent implements OnInit {
   //Etape 1: import { GameService} from "../game.service";
   //Etape 2 : private gameService : GameService dans le constructor
   //Etape 3:
-  userList= this.gameService.getUserList();
 
-  constructor(
-    private gameService : GameService,
-  ) { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  buttonUser() {
 
-  }
 }

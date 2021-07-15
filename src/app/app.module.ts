@@ -8,6 +8,7 @@ import {GamepageComponent} from './gamepage/gamepage.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import { UsertableComponent } from './usertable/usertable.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {RouterModule} from "@angular/router";
     WelcomepageComponent,
     AdminpageComponent,
     PlayerpageComponent,
-    GamepageComponent
+    GamepageComponent,
+    UsertableComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,10 @@ import {RouterModule} from "@angular/router";
       {path: '', component: WelcomepageComponent},
       {path: 'admin', component: AdminpageComponent},
       {path: 'player', component: PlayerpageComponent},
-      {path: 'game', component: GamepageComponent},]),],
+      {path: 'game', component: GamepageComponent},
+      {path: 'usertable', component :UsertableComponent}
+      ]),],
+
 
   providers: [],
   bootstrap: [AppComponent]
