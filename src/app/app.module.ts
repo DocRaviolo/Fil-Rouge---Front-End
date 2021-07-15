@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import { UsertableComponent } from './usertable/usertable.component';
 import { HerotableComponent } from './herotable/herotable.component';
+import { DecortableComponent } from './decortable/decortable.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HerotableComponent } from './herotable/herotable.component';
     PlayerpageComponent,
     GamepageComponent,
     UsertableComponent,
-    HerotableComponent
+    HerotableComponent,
+    DecortableComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +33,8 @@ import { HerotableComponent } from './herotable/herotable.component';
       {path: '', component: WelcomepageComponent},
       {path: 'admin', component: AdminpageComponent, children :[
           {path: 'usertable', component :UsertableComponent},
-          {path: 'herotable', component :HerotableComponent}
-
+          {path: 'herotable', component :HerotableComponent},
+          {path: 'decortable', component :DecortableComponent}
         ]},
       {path: 'player', component: PlayerpageComponent},
       {path: 'game', component: GamepageComponent},

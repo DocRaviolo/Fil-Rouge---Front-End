@@ -1,0 +1,26 @@
+<table id="decorTable">
+
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Modifier</th>
+    <th>Supprimer</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let decor of decorList | async">
+    <td>{{decor.id}}</td>
+    <td>{{decor.name}}</td>
+    <td>
+      <button (click)="updateDecor(decor.id)">Modifier</button>
+    </td>
+    <td>
+      <button (click)="deleteDecor(decor.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+
+</table>
+

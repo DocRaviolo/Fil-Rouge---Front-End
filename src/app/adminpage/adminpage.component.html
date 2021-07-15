@@ -3,14 +3,16 @@
   <h3>Gérer les :</h3>
   <button><a [routerLink]="['usertable']">Utilisateurs</a></button>
   <button><a [routerLink]="['herotable']">Heros</a></button>
-  <!--  <button (click)="buttonDecorElement()">Eléments de décor</button>-->
+  <button><a [routerLink]="['decortable']">Eléments de décor</a></button>
+
+
   <!--  <button (click)="buttonEnemies()">Ennemis</button>-->
   <!--  <button (click)="buttonWeapons()">Armes</button>-->
   <!--  <button (click)="buttonDefenseEquipment()">Equipements défensifs</button>-->
 </section>
 <section id="sectionListes">
   <router-outlet>
-<!--  en fonction de mon router, va s'afficher ici une vue différente-->
+    <!--  en fonction de mon router, va s'afficher ici une vue différente-->
   </router-outlet>
 </section>
 <section id="sectionCreation">
