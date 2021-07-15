@@ -1,0 +1,29 @@
+<table id="defenseTable">
+
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Points</th>
+        <th>Modifier</th>
+    <th>Supprimer</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let defense of defenseList | async">
+    <td>{{defense.id}}</td>
+    <td>{{defense.name}}</td>
+    <td>{{defense.points}}</td>
+        <td>
+      <button (click)="updateDefense(defense.id)">Modifier</button>
+    </td>
+    <td>
+      <button (click)="deleteDefense(defense.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+
+</table>
+
+

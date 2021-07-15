@@ -8,11 +8,12 @@ import {GamepageComponent} from './gamepage/gamepage.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import { UsertableComponent } from './usertable/usertable.component';
-import { HerotableComponent } from './herotable/herotable.component';
-import { DecortableComponent } from './decortable/decortable.component';
-import { EnemytableComponent } from './enemytable/enemytable.component';
-import { WeapontableComponent } from './weapontable/weapontable.component';
+import {UsertableComponent} from './usertable/usertable.component';
+import {HerotableComponent} from './herotable/herotable.component';
+import {DecortableComponent} from './decortable/decortable.component';
+import {EnemytableComponent} from './enemytable/enemytable.component';
+import {WeapontableComponent} from './weapontable/weapontable.component';
+import { DefensetableComponent } from './defensetable/defensetable.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { WeapontableComponent } from './weapontable/weapontable.component';
     HerotableComponent,
     DecortableComponent,
     EnemytableComponent,
-    WeapontableComponent
+    WeapontableComponent,
+    DefensetableComponent
   ],
   imports: [
     BrowserModule,
@@ -35,16 +37,19 @@ import { WeapontableComponent } from './weapontable/weapontable.component';
     //Chemins d'accès vers les différentes pages
     RouterModule.forRoot([
       {path: '', component: WelcomepageComponent},
-      {path: 'admin', component: AdminpageComponent, children :[
-          {path: 'usertable', component :UsertableComponent},
-          {path: 'herotable', component :HerotableComponent},
-          {path: 'decortable', component :DecortableComponent},
-          {path: 'enemytable', component :EnemytableComponent},
-          {path: 'weapontable', component :WeapontableComponent}
-        ]},
+      {
+        path: 'admin', component: AdminpageComponent, children: [
+          {path: 'usertable', component: UsertableComponent},
+          {path: 'herotable', component: HerotableComponent},
+          {path: 'decortable', component: DecortableComponent},
+          {path: 'enemytable', component: EnemytableComponent},
+          {path: 'weapontable', component: WeapontableComponent},
+          {path: 'defensetable', component: DefensetableComponent}
+        ]
+      },
       {path: 'player', component: PlayerpageComponent},
       {path: 'game', component: GamepageComponent},
-      ]),],
+    ]),],
 
 
   providers: [],

@@ -1,4 +1,5 @@
 <h2>Mode administrateur</h2>
+
 <section id="sectionGestion">
   <h3>Gérer les :</h3>
   <button><a [routerLink]="['usertable']">Utilisateurs</a></button>
@@ -6,14 +7,16 @@
   <button><a [routerLink]="['decortable']">Eléments de décor</a></button>
   <button><a [routerLink]="['enemytable']">Ennemis</a></button>
   <button><a [routerLink]="['weapontable']">Armes</a></button>
-
-  <!--  <button (click)="buttonDefenseEquipment()">Equipements défensifs</button>-->
+  <button><a [routerLink]="['defensetable']">Equipements défensifs</a></button>
 </section>
+
 <section id="sectionListes">
   <router-outlet>
     <!--  en fonction de mon router, va s'afficher ici une vue différente-->
   </router-outlet>
 </section>
+
 <section id="sectionCreation">
+
 </section>
 

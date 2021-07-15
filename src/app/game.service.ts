@@ -5,6 +5,7 @@ import {Hero} from "./hero";
 import {Decorelement} from "./decorelement";
 import {Enemy} from "./enemy";
 import {Weapon} from "./weapon";
+import {Defenseequipment} from "./defenseequipment";
 
 @Injectable({
   providedIn: 'root'
@@ -29,13 +30,6 @@ export class GameService {
   getDecorList() {
     return this.http.get<Decorelement[]>(this.baseAPIUrl+'admin/decorelement')
   }
-  //getCardList(timelineId: number) {
-   // return this.http.get<Card[]>(this.baseAPIUrl+'/'+ timelineId + '/card')
- // }
-
-  //deleteCard(cardId: number) {
-  //  return this.http.delete<Card>(this.baseAPIUrl+'/1/card/' + cardId)
- // }
 
   // Méthode pour récupérer la liste des Ennemis
   getEnemyList() {
@@ -47,4 +41,19 @@ export class GameService {
     return this.http.get<Weapon[]>(this.baseAPIUrl+'admin/weapon')
 
   }
+  // Méthode pour récupérer la liste des Equipements Défensifs
+  getDefenseList() {
+    return this.http.get<Defenseequipment[]>(this.baseAPIUrl+'admin/defenseequipment')
+
+  }
+
+//getCardList(timelineId: number) {
+  // return this.http.get<Card[]>(this.baseAPIUrl+'/'+ timelineId + '/card')
+  // }
+
+  //deleteCard(cardId: number) {
+  //  return this.http.delete<Card>(this.baseAPIUrl+'/1/card/' + cardId)
+  // }
+
+
 }
