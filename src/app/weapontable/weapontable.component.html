@@ -1,5 +1,7 @@
 <table id="weaponTable">
 
+  <button (click)="onWeaponCreate()">Nouvelle Arme</button>
+
   <thead>
   <tr>
     <th>Id</th>
@@ -16,12 +18,22 @@
     <td>{{weapon.name}}</td>
     <td>{{weapon.points}}</td>
     <td>
-      <button (click)="updateWeapon(weapon.id)">Modifier</button>
+      <button (click)="onWeaponEdit(weapon)">Modifier</button>
     </td>
     <td>
-      <button (click)="deleteWeapon(weapon.id)">Supprimer</button>
+      <button (click)="onWeaponDelete(weapon.id)">Supprimer</button>
     </td>
   </tr>
   </tbody>
 
 </table>
+
+<form [formGroup]="weaponForm" (ngSubmit)="onWeaponSave()">
+  <label for="weapon-name">Nom</label>
+  <input type="text" id="weapon-name" formControlName="name">
+
+  <label for="weapon-points">Points</label>
+  <input type="number" id="weapon-points" formControlName="points">
+
+  <button type="submit">Sauvegarder</button>
+</form>

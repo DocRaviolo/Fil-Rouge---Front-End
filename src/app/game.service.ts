@@ -62,4 +62,19 @@ export class GameService {
   deleteHero(heroId: number) {
     return this.http.delete(this.baseAPIUrl + 'admin/hero/' + heroId)
   }
+
+  // Méthode pour mettre à jour une Arme
+  updateWeapon(weapon: Weapon): Observable<Hero> {
+    return this.http.put<Weapon>(this.baseAPIUrl + 'admin/weapon', weapon);
+  }
+
+  // Méthode pour créer une Arme
+  createWeapon(weapon : Weapon) {
+    return this.http.post(this.baseAPIUrl + 'admin/weapon',weapon);
+  }
+
+  // Méthode pour supprimer une Arme
+  deleteWeapon(weaponId: number) {
+    return this.http.delete(this.baseAPIUrl + 'admin/weapon/' + weaponId)
+  }
 }

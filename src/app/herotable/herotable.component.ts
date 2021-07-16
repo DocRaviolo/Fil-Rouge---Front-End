@@ -28,7 +28,7 @@ export class HerotableComponent implements OnInit {
   }
 
   // Gestion de l'événement clic sur "Editer" ==> je remplis les champs du formulaire
-  onEditHero(hero: Hero) {
+  onHeroEdit(hero: Hero) {
     this.heroForm.patchValue({
       name: hero.name,
     });
