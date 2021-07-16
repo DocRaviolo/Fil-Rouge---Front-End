@@ -41,7 +41,6 @@ export class GameService {
   // Méthode pour récupérer la liste des Armes
   getWeaponList() {
     return this.http.get<Weapon[]>(this.baseAPIUrl + 'admin/weapon')
-
   }
 
   // Méthode pour récupérer la liste des Equipements Défensifs
@@ -49,18 +48,18 @@ export class GameService {
     return this.http.get<Defenseequipment[]>(this.baseAPIUrl + 'admin/defenseequipment')
   }
 
-  // Méthode pour mettre à jour le Héros
+  // Méthode pour mettre à jour un Héros
   updateHero(hero: Hero): Observable<Hero> {
-    return this.http.put<Hero>(this.baseAPIUrl+'admin/hero', hero);
+    return this.http.put<Hero>(this.baseAPIUrl + 'admin/hero', hero);
   }
 
-//getCardList(timelineId: number) {
-  // return this.http.get<Card[]>(this.baseAPIUrl+'/'+ timelineId + '/card')
-  // }
+  // Méthode pour créer un Héros
+  createHero(hero : Hero) {
+    return this.http.post(this.baseAPIUrl + 'admin/hero',hero);
+  }
 
-  //deleteCard(cardId: number) {
-  //  return this.http.delete<Card>(this.baseAPIUrl+'/1/card/' + cardId)
-  // }
-
-
+  // Méthode pour supprimer un Héros
+  deleteHero(heroId: number) {
+    return this.http.delete(this.baseAPIUrl + 'admin/hero/' + heroId)
+  }
 }

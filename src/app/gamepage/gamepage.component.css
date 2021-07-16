@@ -1,0 +1,24 @@
+#gameTable {
+  width:400px;
+  height: 400px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: solid medium;
+  border-color: purple;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  background-color: sandybrown;
+  border-color: sandybrown;
+}
+
+th, td {
+  border: solid thin;
+  width: 100px;
+  height: 100px;
+  background-color: sandybrown;
+}
+
+

@@ -1,6 +1,6 @@
 <table id="heroTable">
 
-  <button (click)="newHero">Nouveau Héros</button>
+  <button (click)="onHeroCreate()">Nouveau Héros</button>
 
   <thead>
   <tr>
@@ -19,11 +19,12 @@
       <button (click)="onEditHero(hero)">Modifier</button>
     </td>
     <td>
-      <button (click)="deleteHero">Supprimer</button>
+      <button (click)="onHeroDelete(hero.id)">Supprimer</button>
     </td>
   </tr>
   </tbody>
 </table>
+
 
 <form [formGroup]="heroForm" (ngSubmit)="onHeroSave()">
   <label for="hero-name">Nom</label>
